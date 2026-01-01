@@ -1,0 +1,267 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: #ffffff;
+  background: #1a1534;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+}
+
+.container {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.menus-box ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  margin: 0.5em auto;
+  padding: 0.2em;
+  width: 150px;
+  /* width: auto; */
+  max-width: 500px;
+}
+
+ul li {
+  color: rgb(161, 161, 161);
+  margin: 0 0.2em;
+  list-style-type: none;
+}
+
+li i {
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #1a1534;
+  color: #ffffff;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="search"] {
+  display: none;
+  padding: 9px 13px;
+  border: none;
+  outline: none;
+  /* width: 250px; */
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.film-container {
+  /* border: 1px solid red; */
+  /* margin: 2em auto; */
+  width: 100%;
+  padding: 20px;
+  max-width: 1000px;
+  /* height: calc(100vh - 140px); adjust for header/search bar */
+  /* overflow-y: auto; */
+  /* margin: 1em auto; */
+  /* display: none; */
+}
+
+.film-box {
+  /* display: none; */
+  width: 300px;
+  max-width: 650px;
+  height: 450px;
+  margin: 0 auto;
+
+  /* margin: 1em 0; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.border-styl {
+  border-radius: 25px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.swipe-feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 1em 0;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1em; */
+  margin: 0 0.5em;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.heart {
+  color: rgb(117, 179, 24);
+  text-shadow: 1px 1px 1px rgb(117, 179, 24, 0.5);
+}
+
+.undo {
+  color: gold;
+  text-shadow: 1px 1px 1px rgba(129, 115, 3, 0.5);
+}
+
+.cross {
+  color: rgb(255, 7, 7);
+  text-shadow: 1px 1px 1px rgb(255, 7, 7, 0.5);
+}
+
+.btn-selectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+/* POTENTIAL CSS  */
+
+.film-search {
+  /* border: 1px solid red; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #1a1534; */
+  border-radius: 5px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  /* height: 170px; */
+  padding: 1em;
+  /* margin: 1em 0; */
+}
+
+.img-container {
+  /* border: 1px solid red; */
+  /* align-self: flex-end; */
+  width: 100px;
+  /* height: 100px; */
+}
+
+.film-img {
+  width: 100%;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.rating {
+  font-size: 12px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.star-icon {
+  color: #fec654;
+}
+
+.info-container {
+  padding-left: 1.5em;
+  width: 100%;
+  height: 100%;
+}
+
+.top-section {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.middle-section {
+  height: auto;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.middle-section > .watchlist {
+  width: 80px;
+}
+
+.film-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.film-year {
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+.watchlist-btn {
+  background-color: unset;
+  color: inherit;
+  border: none;
+  margin-right: -5px;
+  cursor: pointer;
+}
+
+.film-desc {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+  text-align: justify;
+}
