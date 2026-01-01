@@ -34,19 +34,25 @@ main {
   padding: 0 1rem;
 }
 
-.menus-box ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.menus-box {
   color: black;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
-  margin: 0.5em auto;
   padding: 0.2em;
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+.menus-box ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.restricted {
   width: 150px;
-  /* width: auto; */
-  max-width: 500px;
 }
 
 ul li {
@@ -73,7 +79,6 @@ li i {
 }
 
 input[type="search"] {
-  display: none;
   padding: 9px 13px;
   border: none;
   outline: none;
@@ -100,7 +105,7 @@ input[type="search"] {
 
 .film-box {
   /* display: none; */
-  width: 300px;
+  width: 350px;
   max-width: 650px;
   height: 450px;
   margin: 0 auto;
