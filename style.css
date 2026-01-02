@@ -79,6 +79,7 @@ li i {
 }
 
 input[type="search"] {
+  font-family: "Space Grotesk", sans-serif;
   padding: 9px 13px;
   border: none;
   outline: none;
@@ -97,7 +98,7 @@ input[type="search"] {
   width: 100%;
   padding: 20px;
   max-width: 1000px;
-  /* height: calc(100vh - 140px); adjust for header/search bar */
+  /* height:  */
   /* overflow-y: auto; */
   /* margin: 1em auto; */
   /* display: none; */
@@ -105,7 +106,8 @@ input[type="search"] {
 
 .film-box {
   /* display: none; */
-  width: 350px;
+  /* width: 350px; */
+  width: 100%;
   max-width: 650px;
   height: 450px;
   margin: 0 auto;
