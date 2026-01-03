@@ -2,29 +2,58 @@ export default function Swipe({ movies }) {
   console.log(movies);
 
   return (
-    <>
+    <div className="app-container">
+      {/* <div class="film-standby">
+        <span class="body-text">Popcorn ready? Let’s find a movie.</span>
+      </div> */}
       {movies.map((movie) => (
-        <div>
-          <div>
-            <img src={movie.Poster} />
-            <div>
-              <p>{movie.imdbRating}</p>
+        <div className="film-search">
+          <div className="img-container">
+            <img className="film-img" src={movie.Poster} />
+            <div className="rating">
+              <p className="film-rating">{movie.imdbRating}</p>
               <i className="fa-solid fa-star star-icon"></i>
-              <p>{movie.Year}</p>
+              <p className="film-year">{movie.Year}</p>
             </div>
           </div>
-          <div>
-            <div>
-              <p>{movie.Title}</p>
+          <div className="info-container">
+            <div className="top-section">
+              <p className="film-name">{movie.Title}</p>
             </div>
-            <div>
-              <p>{movie.Runtime}</p>
+            <div className="middle-section">
+              <p className="film-time">{movie.Runtime}</p>
               <p>{movie.Genre}</p>
             </div>
-            <p>{movie.Plot}</p>
+            <p className="film-desc">{movie.Plot}</p>
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 }
+
+// return `<div class="film-boxes">
+//         <div class="img-container">
+//           <img class="film-img" src=${film.Poster} />
+//           <div class="rating">
+//               <p class="film-rating">${film.imdbRating}</p>
+//               <i class="fa-solid fa-star star-icon"></i>
+//               <p class="film-year">${film.Year}</p>
+//           </div>
+//         </div>
+//         <div class="info-container">
+//           <div class="top-section">
+//             <p class="film-name">${film.Title}</p>
+//           </div>
+//           <div class="middle-section">
+//             <p class="film-time">${film.Runtime}</p>
+//             <p>${film.Genre}</p>
+//             <div class="watchlist">
+//               ${watchListStr}
+//             </div>
+//           </div>
+//           <p class="film-desc">${film.Plot}</p>
+//         </div>
+//       </div> `;
+//     })
+//     .join("");

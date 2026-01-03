@@ -34,6 +34,40 @@ main {
   padding: 0 1rem;
 }
 
+.app-container {
+  border: 1px solid red;
+  margin: 2em auto;
+  min-height: 50vh;
+  height: auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.film-standby {
+  /* height: 100vh; */
+  color: #dfdddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.film-icon {
+  font-size: 60px;
+  margin-bottom: 5px;
+}
+
+.body-text {
+  font-weight: 700;
+  text-align: center;
+}
+
 .menus-box {
   color: black;
   background-color: rgb(255, 255, 255);
@@ -41,7 +75,7 @@ main {
   border-radius: 25px;
   padding: 0.2em;
   margin: 0 auto;
-  max-width: 350px;
+  max-width: 320px;
 }
 
 .menus-box ul {
@@ -80,7 +114,7 @@ li i {
 
 input[type="search"] {
   font-family: "Space Grotesk", sans-serif;
-  padding: 9px 13px;
+  padding: 9px;
   border: none;
   outline: none;
   /* width: 250px; */
@@ -109,6 +143,7 @@ input[type="search"] {
   /* width: 350px; */
   width: 100%;
   max-width: 650px;
+  min-width: 300px;
   height: 450px;
   margin: 0 auto;
 
@@ -188,15 +223,16 @@ input[type="search"] {
   justify-content: center;
   /* background: #1a1534; */
   border-radius: 5px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   /* height: 170px; */
   padding: 1em;
-  /* margin: 1em 0; */
+  margin: 1em 0;
+  /* width: auto; */
 }
 
 .img-container {
   /* border: 1px solid red; */
-  /* align-self: flex-end; */
+  align-self: flex-start;
   width: 100px;
   /* height: 100px; */
 }
