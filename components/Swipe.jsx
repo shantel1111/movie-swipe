@@ -1,15 +1,48 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 
 export default function Search() {
+  const containerRef = useRef(null);
+  const [threshold, setThreshold] = useState(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const width = containerRef.current.offsetWidth; // width of the container
+      setThreshold(0.35 * width); // how far i move from the center
+      console.log(`This is the width ${width}`);
+    }
+  }, []);
+
   function onDrag(event, info) {
-    console.log(info.point.x);
+    // console.log(info.point.x);
+    // console.log(threshold);
+
+    if (info.offset.x > threshold) {
+      console.log("YES");
+    } else if (info.offset.x < -threshold) {
+      console.log("NO");
+    } else {
+      console.log("SNAP BACK");
+    }
+  }
+
+  function heart() {
+    console.log("isLiked");
+  }
+
+  function cross() {
+    console.log("isNotLiked");
+  }
+
+  function redo() {
+    console.log("Undo");
   }
 
   return (
     <>
-      <motion.div>
-        <motion.div drag="x" onDrag={onDrag} className="film-container">
+      <motion.div ref={containerRef}>
+        <motion.div drag="x" onDragEnd={onDrag} className="film-container">
           <div className="film-box border-style">
             <h1>film flow</h1>
             <p>swipe. save. watch.</p>
@@ -29,13 +62,13 @@ export default function Search() {
       </motion.div>
 
       <section className="btn-selectors">
-        <button className="icon">
+        <button className="icon" onClick={cross}>
           <i className="fa-solid fa-xmark fa-lg cross"></i>
         </button>
-        <button className="icon">
+        <button className="icon" onClick={redo}>
           <i className="fa-solid fa-rotate-left fa-lg undo"></i>
         </button>
-        <button className="icon">
+        <button className="icon" onClick={heart}>
           <i className="fa-solid fa-heart fa-lg heart"></i>
         </button>
       </section>
@@ -52,7 +85,6 @@ export default function Search() {
 // likedMovies – stores right-swiped movies
 // dislikedMovies – stores left-swiped movies
 // isDragging / dragOffset – for smooth animation if you implement drag
-
 
 // Past +35% → RIGHT swipe (YES)
 // Past −35% → LEFT swipe (NO)
