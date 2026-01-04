@@ -44,6 +44,74 @@ export default function Search() {
     console.log("Undo");
   }
 
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     accept: "application/json",
+  //     Authorization:
+  //       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzN2I2NWQxOGY1NDExNWFlYjUyNGI5OTdhOWEyYzBiZiIsIm5iZiI6MTc2NjE0NjA2MS4yMzUwMDAxLCJzdWIiOiI2OTQ1NDAwZDFiMzM0OWZlYWY4Y2Q3YTUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.TDSoLMQduay7xq_UzP-PZDzBvTquzXfRtteL0E312Jw",
+  //   },
+  // };
+
+  // function renderMovie(movie) {
+  //   fetch(
+  //     `https://api.themoviedb.org/3/search/movie?query=${movie}&include_adult=false&language=en-US`,
+  //     options
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // }
+
+  // fetch("https://api.themoviedb.org/3/genre/movie/list?language=en", options)
+  //   .then((res) => res.json())
+  //   .then((res) => console.log(res.genres))
+  //   .catch((err) => console.error(err));
+
+  // document.addEventListener("DOMContentLoaded");
+
+  // let movieArr = [];
+  // let html = "";
+
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     accept: "application/json",
+  //     Authorization:
+  //       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzN2I2NWQxOGY1NDExNWFlYjUyNGI5OTdhOWEyYzBiZiIsIm5iZiI6MTc2NjE0NjA2MS4yMzUwMDAxLCJzdWIiOiI2OTQ1NDAwZDFiMzM0OWZlYWY4Y2Q3YTUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.TDSoLMQduay7xq_UzP-PZDzBvTquzXfRtteL0E312Jw",
+  //   },
+  // };
+
+  // fetch("https://api.themoviedb.org/3/trending/movie/day?language=en-US", options)
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     console.log(data);
+  //     data.results.forEach(function (movie) {
+  //       return (html = `
+  //         <img class="movie-poster" src=https://image.tmdb.org/t/p/w500/${movie.poster_path}>`);
+  //     });
+  //     filmBox.innerHTML = html;
+  //   })
+  //   .catch((err) => console.error(err));
+
+  // data.results.forEach(function(movie) {
+  //     movieArr.push({
+  //         id: movie.id,
+  //         title: movie.title,
+  //         img: movie.poster_path,
+  //         description: movie_overview
+  //     })
+  // })
+  //  console.log(movieArr)
+
+  //   https://api.themoviedb.org/3/movie/{movie_id}
+
+  //   id: data.id
+  //   title: data.original_title
+  //   image: data.poster_path
+
+  //   https://api.themoviedb.org/3/trending/movie/day?language=en-US
+  //   https://api.themoviedb.org/3/movie/popular
+
   return (
     <>
       <motion.div ref={containerRef}>
@@ -89,7 +157,6 @@ export default function Search() {
 // activeIndex – which movie is on top
 // likedMovies – stores right-swiped movies
 // dislikedMovies – stores left-swiped movies
-
 
 // Past +35% → RIGHT swipe (YES)
 // Past −35% → LEFT swipe (NO)
