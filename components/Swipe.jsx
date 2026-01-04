@@ -20,10 +20,15 @@ export default function Search() {
 
     if (info.offset.x > threshold) {
       console.log("YES");
+      heart(); // what happens after dragEnd
+      // animate off screen
+      //  update state and render card stack
     } else if (info.offset.x < -threshold) {
       console.log("NO");
+      cross();
     } else {
       console.log("SNAP BACK");
+      redo();
     }
   }
 
@@ -84,16 +89,16 @@ export default function Search() {
 // activeIndex – which movie is on top
 // likedMovies – stores right-swiped movies
 // dislikedMovies – stores left-swiped movies
-// isDragging / dragOffset – for smooth animation if you implement drag
+
 
 // Past +35% → RIGHT swipe (YES)
 // Past −35% → LEFT swipe (NO)
 // Between −35% and +35% → cancel
 
-// ✔️ The parent container owns the three-zone rule
+// The parent container owns the three-zone rule
 
-// ✔️ The decision (YES / NO / snap back) lives in the parent
+// The decision (YES / NO / snap back) lives in the parent
 
-// ✔️ The card is responsible for movement and interaction
+// The card is responsible for movement and interaction
 
-// ✔️ The decision is made on release, not during drag
+// The decision is made on release, not during drag
