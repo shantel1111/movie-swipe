@@ -5,6 +5,9 @@ import { useRef, useEffect, useState } from "react";
 export default function Search() {
   const containerRef = useRef(null);
   const [threshold, setThreshold] = useState(null);
+  // const [currentIndex, setCurrentIndex] = useState() // tracks which card is showing 
+  // increment on swipe
+  // decrement on redo
 
   useEffect(() => {
     if (containerRef.current) {
