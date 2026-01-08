@@ -17,13 +17,26 @@ body {
   color: #ffffff;
   background: #1a1534;
 
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   /* height: 100vh; */
 }
 
+header {
+  height: 5em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
   width: 100%;
 }
 
@@ -35,14 +48,15 @@ main {
 }
 
 .app-container {
-  border: 1px solid red;
-  margin: 2em auto;
-  min-height: 50vh;
+  /* border: 1px solid red; */
+  /* margin: 2em auto; */
+  /* min-height: 50vh; */
   height: auto;
 
   display: grid;
+  /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: 1fr;
-  gap: 1em;
+  /* column-gap: 1em; */
   align-items: center;
   width: 100%;
   padding: 20px;
@@ -216,14 +230,13 @@ input[type="search"] {
   /* border: 1px solid red; */
 
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  /* background: #1a1534; */
+  /* background: #343142; */
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  /* height: 170px; */
-  padding: 1em;
-  margin: 1em 0;
+  padding: 0.8em;
+  margin: 0.5em 0;
   /* width: auto; */
 }
 
@@ -254,16 +267,17 @@ input[type="search"] {
 }
 
 .info-container {
+  /* border: 1px solid red; */
   padding-left: 1.5em;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .top-section {
   height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items:; */
   margin-bottom: 10px;
 }
 
@@ -274,12 +288,21 @@ input[type="search"] {
   grid-template-columns: 1fr;
   gap: 5px;
   margin-bottom: 10px;
+  /* border: 1px solid red; */
 }
 
 .middle-section > .watchlist {
   width: 80px;
 }
 
+.bottom-section {
+  /* border: 1px solid red; */
+}
+
+.info {
+  /* border: 1px solid red; */
+  /* padding-right: 0.3em; */
+}
 .film-name {
   font-size: 18px;
   font-weight: 500;
@@ -290,14 +313,14 @@ input[type="search"] {
   text-decoration: underline;
   font-size: 12px;
 }
-
+/* 
 .watchlist-btn {
   background-color: unset;
   color: inherit;
   border: none;
   margin-right: -5px;
   cursor: pointer;
-}
+} */
 
 .film-desc {
   font-size: 12px;

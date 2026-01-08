@@ -56,56 +56,59 @@ export default function App() {
   }
 
   return (
-    <main className="container">
-      <div className={`menus-box ${restricted ? "restricted" : ""}`}>
-        <ul>
-          <li
-            onClick={() => {
-              setView("swipe");
-            }}
-          >
-            <i className="fa-solid fa-film selected"></i>
-          </li>
-          <div className="search-container">
+    <>
+      <header>
+        <div className={`menus-box ${restricted ? "restricted" : ""}`}>
+          <ul>
             <li
               onClick={() => {
-                setView("search");
-                setRestricted(false);
-                setShowSearch(true);
+                setView("swipe");
               }}
             >
-              <i className="fa-solid fa-magnifying-glass "></i>
+              <i className="fa-solid fa-film selected"></i>
             </li>
-            {showSearch && (
-              <input
-                id="search-el"
-                type="search"
-                placeholder="Search for a movie"
-                value={searchValue}
-                onChange={handleChange}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    fetchMovies();
-                  }
+            <div className="search-container">
+              <li
+                onClick={() => {
+                  setView("search");
+                  setRestricted(false);
+                  setShowSearch(true);
                 }}
-              />
-            )}
-          </div>
-          <li
-            onClick={() => {
-              setView("watchlist");
-              setRestricted(true);
-              setShowSearch(false);
-            }}
-          >
-            <i className="fa-solid fa-heart-circle-check"></i>
-          </li>
-        </ul>
-      </div>
-
-      {(view === "swipe" && <Swipe />) ||
-        (view === "search" && <Search movies={movies} />) ||
-        (view === "watchlist" && <Watchlist />)}
-    </main>
+              >
+                <i className="fa-solid fa-magnifying-glass "></i>
+              </li>
+              {showSearch && (
+                <input
+                  id="search-el"
+                  type="search"
+                  placeholder="Search for a movie"
+                  value={searchValue}
+                  onChange={handleChange}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      fetchMovies();
+                    }
+                  }}
+                />
+              )}
+            </div>
+            <li
+              onClick={() => {
+                setView("watchlist");
+                setRestricted(true);
+                setShowSearch(false);
+              }}
+            >
+              <i className="fa-solid fa-heart-circle-check"></i>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main className="container">
+        {(view === "swipe" && <Swipe />) ||
+          (view === "search" && <Search movies={movies} />) ||
+          (view === "watchlist" && <Watchlist />)}
+      </main>
+    </>
   );
 }

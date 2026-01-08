@@ -1,6 +1,10 @@
 export default function Swipe({ movies }) {
   console.log(movies);
 
+  function cleanPlot(plot) {
+    console.log(plot);
+  }
+
   return (
     <div className="app-container">
       {/* <div class="film-standby">
@@ -24,7 +28,11 @@ export default function Swipe({ movies }) {
               <p className="film-time">{movie.Runtime}</p>
               <p>{movie.Genre}</p>
             </div>
-            <p className="film-desc">{movie.Plot}</p>
+            <p className="film-desc">{cleanPlot(movie.Plot)}</p>
+          </div>
+          <div className="bottom-section">
+            <i class="fa-solid fa-circle-info info"></i>
+            <i class="fa-solid fa-circle-plus"></i>
           </div>
         </div>
       ))}
